@@ -5,3 +5,13 @@
 @import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+ .flash-fix {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50%;
+  z-index: 1001;
+}
