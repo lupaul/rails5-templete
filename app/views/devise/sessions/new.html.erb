@@ -1,0 +1,68 @@
+      <div class="top-content">
+          <div class="inner-bg">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-8 col-sm-offset-2 text">
+                          <h1>使用者登入</h1>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 form-box">
+                        <div class="form-top">
+                          <div class="form-top-left">
+                            <h3>Login to our site</h3>
+                              <h4>Enter your Email and Password to login:</h4>
+                          </div>
+                          <div class="form-top-right">
+                            <i class="fa fa-key"></i>
+                          </div>
+                          </div>
+                      <div class="form-bottom">
+                        <div class="form-group">
+                            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                              <div class="form-inputs">
+                                <div class="form-group">
+                                  <%= f.input :email, required: false, autofocus: true, input_html: {class: 'form-control'} %>
+                                </div>
+                                <div class="form-group">
+                                  <%= f.input :password, required: false, input_html: {class: 'form-control'} %>
+                                </div>
+                                <div class="form-group">
+                                  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                                </div>
+                              </div>
+                              <div class="form-actions">
+                                <%= button_tag(type: 'submit', class: "btn btn-primary") do%>
+                                    Login
+                                <% end %>
+                              </div>
+                            <% end %>
+                            <%= render "devise/shared/links" %>
+                          </div>
+                      </div>
+                    </div>
+                  <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3 social-login">
+                        <h3>...or login with:</h3>
+                        <div class="social-login-buttons">
+                          <%= link_to "#", class:"btn-link-1 btn-link-1-facebook" do %>
+                              <i class="fa fa-facebook">  Facebook</i>
+                          <% end %>
+
+                          <%= link_to "#", class:"btn-link-1 btn-link-1-google-plus" do %>
+                              <i class="fa fa-google-plus">  Google</i>
+                          <% end %>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+
+<script>
+$(document).ready(function() {
+  $.backstretch([
+        	"<%= asset_path 'backgrounds/1.jpg' %>"]);
+});
+</script>
