@@ -1,8 +1,6 @@
 class WelcomeController < ApplicationController
   layout 'admin'
 
-  def index
-    flash[:alert] = "Warning!!"
-    
+  def index    
   end
 end
