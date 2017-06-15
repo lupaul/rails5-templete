@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   layout 'admin'
+  before_action :authenticate_user!
 
-  def index    
+  def index
   end
 end
