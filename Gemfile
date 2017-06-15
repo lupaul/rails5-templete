@@ -41,7 +41,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem "font-awesome-rails"
 gem 'backstretch-rails'
-gem 'myslq2'
+gem 'mysql2'
 
 
 
