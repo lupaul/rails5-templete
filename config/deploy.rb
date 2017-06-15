@@ -1,8 +1,10 @@
+`ssh-add`
 # config valid only for current version of Capistrano
 lock "3.8.0"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "rails5-templete"
+set :repo_url, "git@github.com:lupaul/rails5-templete.git"
+set :deploy_to, '/home/deploy/rails5-templete'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -22,6 +24,9 @@ set :repo_url, "git@example.com:me/my_repo.git"
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
+set :passenger_restart_with_touch, true
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
